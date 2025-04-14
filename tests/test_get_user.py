@@ -29,5 +29,5 @@ def test_get_invalid_user_404(apis):
 def test_get_user_with_invalid_endpoints_404(apis):
     user_id = test_create_user.test_createuser(apis)
     response = apis.get(f"/public/v2/user/{user_id}")
-    print(response.json())
+    #print(response.json())
     assert response.status_code == HTTPStatus.NOT_FOUND
